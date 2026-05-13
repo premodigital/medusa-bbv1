@@ -14,4 +14,4 @@ RUN npm run build && npx medusa build
 
 EXPOSE 9000
 
-CMD ["sh", "-c", "npx medusa db:migrate && npx medusa start"]
+CMD ["sh", "-c", "cd /app && npx medusa db:migrate && cd /app/.medusa/server && npx medusa start"]
